@@ -1,0 +1,15 @@
+{% extends "plantillaPadre.html" %}
+
+{% block title %} Formulario {% endblock %}
+
+{% block contenido %} 
+
+<form action="{% url 'registro' %}" method="post">
+    {% csrf_token %}
+    <p>Nombre:</p>
+    <input type="text" name="name">
+    <p>Nombre de la marca:</p>
+    <input type="number" name="marca">
+    <input type="submit" value="Enviar">
+  </form>
+  {% endblock contenido %}

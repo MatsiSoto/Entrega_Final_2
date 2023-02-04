@@ -1,0 +1,17 @@
+{% extends "plantillaPadre.html" %}
+
+{% block content %}
+
+<h2>Creado</h2>
+
+    <form action="/create/zapatilla/" method="POST">
+        {% csrf_token %}
+        {{form}}
+
+        <button>
+            Save
+        </button>
+
+    </form>
+
+{% endblock %}

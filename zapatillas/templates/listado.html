@@ -1,0 +1,34 @@
+{% extends "plantillaPadre.html" %}
+
+{% block title %} Listado {% endblock %}
+
+{% block content %} 
+
+<br>
+<br>
+<br>
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            
+
+            <ul>
+                {% for task in tasks %}
+                <a class="list-group-item" href="{% url 'task_detalle' task.id %}">       
+                    <h3>{{task.title}}</h3>
+                    <br><p>{{task.description}}</p>
+                    <p>{{task.user.username}}</p>
+                </a>  
+                {% endfor %}
+                
+            </ul>
+
+
+
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

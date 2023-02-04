@@ -1,0 +1,32 @@
+{% extends "plantillaPadre.html" %}
+
+{% block title %} Registrarse {% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form action="/Registro/" method="POST" class="card card-body text">
+                <h2>Registrarse </h2>
+                {{error}}
+                {% csrf_token %}
+                {{form.as_table}}
+    
+                <br>
+                <br>
+                <button class="btn btn-primary">
+                    Signup
+                </button>
+    
+    
+            </form>
+        </div>    
+    </div>
+</main>
+
+{% endblock %}

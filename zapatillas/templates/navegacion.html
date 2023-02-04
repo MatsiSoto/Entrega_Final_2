@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+				<a class="navbar-brand" href="{% url 'task' %}">Home</a>
+				<a class="navbar-brand" href="{% url 'listado' %}">Listado</a>
+                <a class="btn btn-primary" href="{% url 'registro' %}">Sing up</a>
+                <a class="btn btn-primary" href="{% url 'signin' %}">Login</a>
+                {% if user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+                {% endif %}
+                <a class="navbar-brand" href="{% url 'about' %}">Sobre mi</a>
+            </div>
+        </nav>
+	</body>
+</html>
+
+

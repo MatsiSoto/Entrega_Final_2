@@ -1,0 +1,36 @@
+{% extends "plantillaPadre.html" %}
+
+{% block content %} 
+
+<br>
+<br>
+
+<h2>{{task.title}}</h2>
+
+<br>
+<br>
+
+{{error}}
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+    <button class="btn btn-primary">
+        Update
+    </button>
+</form>
+
+<form action="{% url 'task_delete' task.id %}" method="POST">
+    {% csrf_token %}
+    <br>
+    <br>
+    <button class="btn btn-primary">
+      Delete
+    </button>
+</form>  
+    
+
+
+
+{% endblock %}

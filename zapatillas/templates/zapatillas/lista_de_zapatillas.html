@@ -1,0 +1,17 @@
+{% extends "plantillaPadre.html" %}
+
+{% block title %} Planilla {% endblock %}
+
+{% block contenido %} 
+
+<p>
+    <h2>Lista completa con entrega</h2>
+</p>
+
+<ul>
+    {% for zapas in zapatillas %}
+      <li>{{ zapas.name }}, {{ zapas.marca}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock contenido%}
