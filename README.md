@@ -1,5 +1,9 @@
 # Entrega_Final_2
 
+Video con el funcionamiento
+
+https://www.awesomescreenshot.com/video/14546499
+
 INSTRUCCIONES PARA INSTALAR EN LOCAL
 
 - Crear carpeta Madre, donde guardaras tu ambiente virtual y tu proyecto Django
